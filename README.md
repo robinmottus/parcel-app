@@ -27,7 +27,7 @@ $ npm run start:dev
 
 To run frontend, cd into app-ui package and
 ```bash
-ng build
+npm install
 ```
 ```bash
 ng serve
