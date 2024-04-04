@@ -1,0 +1,35 @@
+<div class="main" ng-app="mytodo" ng-controller="myCtrl">
+<h1>Parcels</h1>
+<div class="search">
+    <label for="country">Search by country: </label>
+    <input type="text" [(ngModel)]="country" id="country">
+    <label for="description">Search by description: </label>
+    <input type="text" [(ngModel)]="description" id="description">
+    <button type="button" (click)="filterParcels(country, description)">Search</button>
+  </div>
+  <div class="table">
+    <div class="table-header">
+      <td class="header">SKU </td>
+      <td class="header">Description </td>
+      <td class="header">Address </td>
+      <td class="header">Town </td>
+      <td class="header">Country </td>
+      <td class="header">Delivery date </td>
+    </div>
+  <ul>
+    <li *ngFor= "let parcel of parcels | orderBy:['country', 'asc']">
+        <div class="table-items">
+          <td class="item">{{ parcel.sku}}</td>
+          <td class="item">{{ parcel.description }}</td>
+          <td class="item">{{parcel.address}}</td>
+          <td class="item">{{parcel.town}}</td>
+          <td class="item">{{parcel.country}}</td>
+          <td class="item">{{parcel.date}}</td>
+        </div>
+
+    </li>
+  </ul>
+  </div>
+  <p></p>
+
+</div>
