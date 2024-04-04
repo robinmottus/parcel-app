@@ -1,0 +1,6 @@
+[submodule "app-ui"]
+    path = app-ui
+    url = https://github.com/robinmottus/app-ui
+[submodule "backend"]
+        path = backend
+        url = https://github.com/robinmottus/backend
